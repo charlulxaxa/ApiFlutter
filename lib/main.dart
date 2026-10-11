@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yugioh_api/messyPage.dart';
+import 'package:yugioh_api/ui/pages/single_fetch.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
        
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const HomePage(),
+       home: const SingleFetch(),
     );
   }
 }
