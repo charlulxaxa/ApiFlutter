@@ -5,9 +5,9 @@ import '../../models/yugiohModel.dart';
 
 class YugiohCard extends StatelessWidget {
   final Yugioh yugioh;
-  final VoidCallback onAdd;
+  final VoidCallback? onAdd;
 
-  const YugiohCard({super.key, required this.yugioh, required this.onAdd});
+  const YugiohCard({super.key, required this.yugioh,this.onAdd});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class YugiohCard extends StatelessWidget {
           attribute: yugioh.attribute,
         ),
         const SizedBox(height: 8),
-        AppButton(label: 'Add Card', onPressed: onAdd),
+        onAdd != null ? AppButton(label: 'Add Card', onPressed: onAdd): const SizedBox.shrink(),
       ],
     );
   }

@@ -5,6 +5,7 @@ import '../atoms/atoms.dart';
 import '../molecules/molecules.dart';
 import '../organism/yugioh_card.dart';
 import '../template/single_template.dart';
+import 'Stream.dart';
 
 class SingleFetch extends StatefulWidget {
   const SingleFetch({super.key});
@@ -41,7 +42,15 @@ class _SingleFetchState extends State<SingleFetch> {
   @override
   Widget build(BuildContext context) {
     return SingleTemplate(
-      appbar:BarApp(title: 'Blue-Eyes'),
+      appbar:BarApp(title: 'Blue-Eyes',actions: [
+          AppButton(
+            label:"Stream",
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => YugiohStream()),
+            ),
+          ),
+        ],),
       cards: [
         FutureBuilder<List<Yugioh>>(
           future: _cards,
