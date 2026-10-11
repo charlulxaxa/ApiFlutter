@@ -42,7 +42,7 @@ class _SingleFetchState extends State<SingleFetch> {
   @override
   Widget build(BuildContext context) {
     return SingleTemplate(
-      appbar:BarApp(title: 'Blue-Eyes',actions: [
+      appbar:BarApp(title: 'Single Fetch',actions: [
           AppButton(
             label:"Stream",
             onPressed: () => Navigator.push(
