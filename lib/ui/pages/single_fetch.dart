@@ -72,8 +72,7 @@ class _SingleFetchState extends State<SingleFetch> {
               itemBuilder: (_, i) => Padding(
                 padding: const EdgeInsets.only(bottom: 24),
                 child: Center(
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxWidth: 240),
+                  child: Container(
                     child: YugiohCard(
                       yugioh: cards[i],
                       onAdd: () => addCard(cards[i]),
